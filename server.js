@@ -54,6 +54,13 @@ app.get('/bad', function (request, response) {
     response.send({ errorMessage: "Unable to handle request" });
 })
 
+app.get('/projects', function (request, response) {
+    response.render('projects', {
+        pageTitle: 'Projects page',
+        welcomeMessage: 'Portfolio page here'
+    })
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function () {
